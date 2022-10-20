@@ -1,0 +1,14 @@
+{
+  "name": "miteprod-games-hub",
+  "version": "1.0.0",
+  "description": "Mite Productions Game Hub",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Mite Productions",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^21.2.0"
+  }
+}
