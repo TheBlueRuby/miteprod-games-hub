@@ -4,6 +4,8 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1280,
     height: 720,
+    icon: "favicon.ico",
+    autoHideMenuBar: true,
   });
 
   win.loadFile("index.html");

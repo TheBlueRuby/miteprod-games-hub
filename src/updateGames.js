@@ -1,4 +1,6 @@
 async function updatePage() {
+    let container = document.querySelector('.games-container');
+    container.innerHTML = `<h2>Loading Data!</h2>`;
     let games = await updateGameData();
     let gameSection = '';
 
@@ -13,7 +15,6 @@ async function updatePage() {
         gameSection += gameEntry;
     });
 
-    let container = document.querySelector('.games-container');
     container.innerHTML = gameSection;
 }
 
@@ -27,7 +28,7 @@ async function updateGameData() {
 
     let games = [];
 
-    for (i = 0; i < gamesList.length; i++) {
+    for (let i = 0; i < gamesList.length; i++) {
         games[i] = await grabData(apiUrl + "games/" + gamesList[i] + "/");
     }
 
