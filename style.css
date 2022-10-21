@@ -1,0 +1,79 @@
+:root {
+    --bg-color: linear-gradient(to bottom, #00b, #0060cc);
+    --txt-color: #fff;
+    --txt-color-light: #ccc;
+
+    --card-background-color: rgba(255, 255, 255, 0.25);
+    --card-border-color: #0af;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--bg-color);
+    color: var(--txt-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding-left: 1vw;
+}
+
+button {
+    background-color: #0af;
+    color: var(--txt-color);
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+    padding: 1%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: content-box;
+}
+
+
+.game-entry {
+    border: 2px solid var(--card-border-color);
+    border-radius: 4px;
+    background-color: var(--card-background-color);
+    margin: 5px;
+    padding: 5px;
+    min-width: 180px;
+    max-width: 320px;
+    height: 400px;
+}
+
+.game-img {
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.game-name {
+    height: 50px;
+}
+
+.game-author {
+    font-size: small;
+    color: var(--txt-color-light);
+}
+
+.game-description {
+    height: 75px;
+}
+
+.download-btn {
+    background-color: #0af;
+    border-radius: 4px;
+    color: var(--txt-color);
+    text-decoration: none;
+    padding: 5px;
+}
