@@ -8,15 +8,25 @@
 }
 
 html {
-    width: 100vw;
-    height: 100vh;
-    background-image: var(--bg-color);
+    width: 100%;
+    height: 100%;
+
+    background: var(--bg-color)no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
     color: var(--txt-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     padding-left: 1vw;
+}
+
+a {
+    color: #0f0;
 }
 
 button {
@@ -29,11 +39,12 @@ button {
 
 
 
-.games-container {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: auto;
+    margin-left: 1rem;
     padding: 1%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -41,7 +52,7 @@ button {
 }
 
 
-.game-entry {
+.entry {
     border: 2px solid var(--card-border-color);
     border-radius: 4px;
     background-color: var(--card-background-color);
@@ -49,24 +60,27 @@ button {
     padding: 5px;
     min-width: 180px;
     max-width: 320px;
+}
+
+.game-entry {
     height: 400px;
 }
 
-.game-img {
+.img {
     max-height: 150px;
     object-fit: contain;
 }
 
-.game-name {
+.name {
     height: 50px;
 }
 
-.game-author {
+.light-text, .author {
     font-size: small;
     color: var(--txt-color-light);
 }
 
-.game-description {
+.description {
     height: 75px;
 }
 

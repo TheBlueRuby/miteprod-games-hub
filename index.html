@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Mite Productions Games</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body onload="updatePage();">
-        <h1>Mite Productions Games</h1>
-        <button onclick="updatePage();">Update Game List</button>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mite Productions Games</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body onload="updateGames(); updatePosts();">
+    <h1>Mite Productions</h1>
+
+    <div class="games-section section">
+        <h2>Games</h2>
+        <button onclick="updateGames();">Update Game List</button>
         <br />
 
-        <div class="games-container"></div>
+        <div class="games-container container"></div>
+    </div>
+    <br>
 
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-        <script src="updateGames.js"></script>
-    </body>
+    <div class="posts-section section">
+        <h2>Posts</h2>
+        <button onclick="updatePosts();">Update Post List</button>
+        <br />
+
+        <div class="post-container container"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="updateGames.js" type="module"></script>
+    <script src="updatePosts.js" type="module"></script>
+</body>
+
 </html>
